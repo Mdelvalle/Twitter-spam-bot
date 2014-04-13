@@ -15,9 +15,27 @@ class MicroBlogger
       @client.update(message)
     end
   end
+
+  def run
+    command = ""
+    while command != "q"
+      puts ""
+      printf "Enter command: "
+      input = gets.chomp
+      parts = input.split
+      command = parts[0]
+
+      case command
+        when 'q' then puts "Goodbye!"
+        when 't' then tweet(parts[1..-1].join(" "))
+        else
+          puts "Sorry, I don't know how to #{command}"
+        end
+      end
+    end
 end
 
 if __FILE__ == $0
   blogger = MicroBlogger.new
-  blogger.tweet("".ljust(140, "z"))
+  blogger.run
 end
