@@ -1,4 +1,4 @@
-require 'jumstart_auth'
+require 'jumpstart_auth'
 
 class MicroBlogger
   attr_reader :client
