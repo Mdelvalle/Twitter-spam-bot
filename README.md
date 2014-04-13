@@ -1,4 +1,5 @@
 micro_blogger
 =============
 
-Mostly practice using the Twitter API and Ruby.
+Twitter spam bot.
+Mostly for practice on using the Twitter API and Ruby.
