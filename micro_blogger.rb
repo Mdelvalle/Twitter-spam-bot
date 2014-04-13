@@ -20,7 +20,12 @@ class MicroBlogger
     puts "Trying to send #{target} this direct message: "
     puts message
     str = "d #{target} #{message}"
-    tweet(str)
+    screen_names = @client.followers.collect { |follower| follower.screen_name }
+    if screen_names.include? target
+      tweet(str)
+    else
+      puts "Error: You can only DM people who you follow!"
+    end
   end
 
   def run
