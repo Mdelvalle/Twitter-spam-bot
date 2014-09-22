@@ -1,5 +1,4 @@
-micro_blogger
+Twitter Spam Bot
 =============
 
-Twitter spam bot.
 Mostly for practice on using the Twitter API and Ruby.
